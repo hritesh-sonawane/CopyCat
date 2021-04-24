@@ -2,13 +2,13 @@ const fontFamily = "Comic Sans MS, Lucida Handwriting, cursive";
 const fontSize = "5vh";
 const backgroundColor = "#282c34";
 const minHeight = "100vh";
-const minWidth = 400;
+const minWidth = 400; // auto adds px
 const display = "flex";
 const flexDirection = "column";
 const alignItems = "center";
 const justifyContent = "center";
 const color = "white";
-const marginTop = "20px";
+const marginTop = "20px"; // can be only 20 as well
 const width = "50%";
 
 const divStyles = {
@@ -27,4 +27,9 @@ const divStyles = {
 const imgStyles = {
   marginTop: marginTop,
   width: width,
+};
+
+export const styles = {
+  divStyles: divStyles,
+  imgStyles: imgStyles,
 };

@@ -1,5 +1,6 @@
 // Presentational component (how it looks!)
 import React from "react";
+import { styles } from "../styles";
 
 const images = {
   copycat:
@@ -14,9 +15,10 @@ export class CopyCat extends React.Component {
     const toggleTape = this.props.toggleTape;
 
     return (
-      <div>
-        <h1>Copy Cat</h1>
+      <div style={styles.divStyles}>
+        <h1 style={{ marginBottom: "80px" }}>Copy Cat</h1>
         <img
+          style={styles.imgStyles}
           alt="cat"
           src={copying ? images.copycat : images.quietcat}
           onClick={toggleTape}
