@@ -16,8 +16,9 @@ export class CopyCat extends React.Component {
 
     return (
       <div style={styles.divStyles}>
-        <h1 style={{ marginBottom: "80px" }}>Copy Cat {name || "Tom"}</h1>
+        <h1 style={{ marginBottom: "40px" }}>Copy Cat {name || "Tom"}</h1>
         <input type="text" value={value} onChange={handleChange} />
+        <p>Click on Ben to shut him up</p>
         <img
           style={styles.imgStyles}
           alt="cat"

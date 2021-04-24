@@ -1,5 +1,5 @@
 const fontFamily = "Comic Sans MS, Lucida Handwriting, cursive";
-const fontSize = "5vh";
+const fontSize = "3vh";
 const backgroundColor = "#282c34";
 const minHeight = "100vh";
 const minWidth = 400; // auto adds px
@@ -9,7 +9,7 @@ const alignItems = "center";
 const justifyContent = "center";
 const color = "white";
 const marginTop = "20px"; // can be only 20 as well
-const width = "50%";
+const width = "20%";
 
 const divStyles = {
   fontFamily: fontFamily,

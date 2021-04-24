@@ -2,13 +2,6 @@
 import React from "react";
 import { CopyCat } from "../components/CopyCat";
 
-const images = {
-  copycat:
-    "https://content.codecademy.com/courses/React/react_photo_copycat.png",
-  quietcat:
-    "https://content.codecademy.com/courses/React/react_photo_quietcat.png",
-};
-
 class CopyCatContainer extends React.Component {
   constructor(props) {
     super(props);
