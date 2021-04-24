@@ -15,20 +15,35 @@ class CopyCatContainer extends React.Component {
 
     this.state = {
       copying: true,
+      input: "",
     };
 
     this.toggleTape = this.toggleTape.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   toggleTape() {
     this.setState({ copying: !this.state.copying });
   }
 
+  handleChange(e) {
+    this.setState({ input: e.target.value });
+  }
+
   render() {
     const copying = this.state.copying;
     const toggleTape = this.toggleTape;
+    const value = this.state.input;
+    const handleChange = this.handleChange;
 
-    return <CopyCat copying={copying} toggleTape={toggleTape} />;
+    return (
+      <CopyCat
+        copying={copying}
+        toggleTape={toggleTape}
+        value={value}
+        handleChange={handleChange}
+      />
+    );
   }
 }
 
