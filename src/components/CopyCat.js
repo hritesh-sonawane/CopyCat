@@ -1,3 +1,4 @@
+// Presentational component (how it looks!)
 import React from "react";
 
 const images = {
@@ -7,24 +8,10 @@ const images = {
     "https://content.codecademy.com/courses/React/react_photo_quietcat.png",
 };
 
-class CopyCat extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      copying: true,
-    };
-
-    this.toggleTape = this.toggleTape.bind(this);
-  }
-
-  toggleTape() {
-    this.setState({ copying: !this.state.copying });
-  }
-
+export class CopyCat extends React.Component {
   render() {
-    const copying = this.state.copying;
-    const toggleTape = this.toggleTape;
+    const copying = this.props.copying;
+    const toggleTape = this.props.toggleTape;
 
     return (
       <div>
@@ -38,5 +25,3 @@ class CopyCat extends React.Component {
     );
   }
 }
-
-export default CopyCat;
