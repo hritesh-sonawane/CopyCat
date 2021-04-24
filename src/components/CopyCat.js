@@ -1,6 +1,7 @@
 // Presentational component (how it looks!)
 import React from "react";
 import { styles } from "../styles";
+import PropTypes from "prop-types";
 
 const images = {
   copycat:
@@ -11,11 +12,11 @@ const images = {
 
 export class CopyCat extends React.Component {
   render() {
-    const { copying, toggleTape, value, handleChange } = this.props; // destructuring
+    const { copying, toggleTape, value, handleChange, name } = this.props; // destructuring
 
     return (
       <div style={styles.divStyles}>
-        <h1 style={{ marginBottom: "80px" }}>Copy Cat</h1>
+        <h1 style={{ marginBottom: "80px" }}>Copy Cat {name || "Tom"}</h1>
         <input type="text" value={value} onChange={handleChange} />
         <img
           style={styles.imgStyles}
@@ -28,3 +29,11 @@ export class CopyCat extends React.Component {
     );
   }
 }
+
+CopyCat.propTypes = {
+  copying: PropTypes.bool.isRequired,
+  toggleTape: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  name: PropTypes.string,
+};

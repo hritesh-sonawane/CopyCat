@@ -42,6 +42,7 @@ class CopyCatContainer extends React.Component {
         toggleTape={toggleTape}
         value={value}
         handleChange={handleChange}
+        name={"Ben"}
       />
     );
   }
